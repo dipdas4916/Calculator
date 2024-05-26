@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="/Calculator Project/css/index.css">
+</head>
+<body>
+    <div id="calulator-background">
+        <div id="main-calculator">
+            <input type="text" inputmode="numeric" id="input-area" placeholder="Don't Use External Keyboard" readonly>
+            <div id="button-container">
+                <button class="button" onclick="inp = '';document.querySelector('#input-area').value = inp;">C</button>
+
+
+                <button class="button" onclick="inp = inp + '1';document.querySelector('#input-area').value = inp;"
+                >1</button>
+
+                <button class="button" onclick="inp = inp + '2';document.querySelector('#input-area').value = inp;">2</button>
+
+                <button class="button" onclick="inp = inp + '+';document.querySelector('#input-area').value = inp;  
+
+                if((inp.charAt(inp.length-2)=='+') || (inp.charAt(inp.length-2)=='/') || (inp.charAt(inp.length-2)=='=') || (inp.charAt(inp.length-2)=='.')){
+                    document.querySelector('#input-area').value = 'invalid input ';
+                    inp = '';
+                    err = true;
+                }">+</button>
+
+                <button class="button" onclick="inp = inp + '3';document.querySelector('#input-area').value = inp;">3</button>
+
+                <button class="button" onclick="inp = inp + '4';document.querySelector('#input-area').value = inp;">4</button>
+
+                <button class="button" onclick="inp = inp + '-';document.querySelector('#input-area').value = inp;
+                
+                if((inp.charAt(inp.length-2)=='/') || (inp.charAt(inp.length-2)=='=') || (inp.charAt(inp.length-2)=='.')){
+                    document.querySelector('#input-area').value = 'invalid input ';
+                    inp = '';
+                    err = true;
+                }
+                
+                ">-</button>
+
+                <button class="button" onclick="inp = inp + '5';document.querySelector('#input-area').value = inp;">5</button>
+
+                <button class="button" onclick="inp = inp + '6';document.querySelector('#input-area').value = inp;">6</button>
+
+                <button class="button" onclick="inp = inp + '*';document.querySelector('#input-area').value = inp;
+                
+                if((inp.charAt(inp.length-2)=='+') || (inp.charAt(inp.length-2)=='/') || (inp.charAt(inp.length-2)=='=') || (inp.charAt(inp.length-2)=='.') || (inp.charAt(inp.length-2)=='-') || (inp.charAt(inp.length-2)=='*')){
+                    document.querySelector('#input-area').value = 'invalid input ';
+                    inp = '';
+                    err = true;
+                }
+                
+                ">*</button>
+
+                <button class="button" onclick="inp = inp + '7';document.querySelector('#input-area').value = inp;">7</button>
+
+                <button class="button" onclick="inp = inp + '8';document.querySelector('#input-area').value = inp;">8</button>
+
+                <button class="button" onclick="inp = inp + '/';document.querySelector('#input-area').value = inp;
+                
+                if((inp.charAt(inp.length-2)=='+') || (inp.charAt(inp.length-2)=='/') || (inp.charAt(inp.length-2)=='=') || (inp.charAt(inp.length-2)=='.') || (inp.charAt(inp.length-2)=='-') || (inp.charAt(inp.length-2)=='*')){
+                    document.querySelector('#input-area').value = 'invalid input ';
+                    inp = '';
+                    err = true;
+                }
+
+                ">/</button>
+
+                <button class="button" onclick="document.querySelector('#input-area').value = eval(inp); inp = '';equal = true;
+                
+                if((inp.charAt(inp.length-2)=='+') || (inp.charAt(inp.length-2)=='/') || (inp.charAt(inp.length-2)=='=') || (inp.charAt(inp.length-2)=='.') || (inp.charAt(inp.length-2)=='-') || (inp.charAt(inp.length-2)=='*')){
+                    document.querySelector('#input-area').value = 'invalid input ';
+                    inp = '';
+                    err = true;
+                }
+                
+                ">=</button>
+
+                <button class="button" onclick="inp = inp + '9';document.querySelector('#input-area').value = inp;">9</button>
+                
+                <button class="button" onclick="inp = inp + '0';document.querySelector('#input-area').value = inp;">0</button>
+
+                <button class="button" onclick="inp = inp + '.';document.querySelector('#input-area').value = inp;
+                
+                if( (inp.charAt(inp.length-2)=='.')){
+                    document.querySelector('#input-area').value = 'invalid input ';
+                    inp = '';
+                    err = true;
+                }
+                
+                ">.</button>
+            </div>
+        </div>
+    </div>
+    <script src="/Calculator Project/js/index.js"></script>
+</body>
+</html>
