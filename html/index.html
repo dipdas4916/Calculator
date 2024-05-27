@@ -101,7 +101,7 @@
 
                 <button class="button" onclick="inp = inp + '*';document.querySelector('#input-area').value = inp;
                 
-                if((inp.charAt(inp.length-2)=='+') || (inp.charAt(inp.length-2)=='/') || (inp.charAt(inp.length-2)=='=') || (inp.charAt(inp.length-2)=='.') || (inp.charAt(inp.length-2)=='-') || (inp.charAt(inp.length-2)=='*')){
+                if((inp.charAt(0)=='*') || (inp.charAt(0)=='/') || (inp.charAt(inp.length-2)=='+') || (inp.charAt(inp.length-2)=='/') || (inp.charAt(inp.length-2)=='=') || (inp.charAt(inp.length-2)=='.') || (inp.charAt(inp.length-2)=='-') || (inp.charAt(inp.length-2)=='*')){
                     document.querySelector('#input-area').value = 'invalid input ';
                     inp = '';
                     err = true;
@@ -115,7 +115,7 @@
 
                 <button class="button" onclick="inp = inp + '/';document.querySelector('#input-area').value = inp;
                 
-                if((inp.charAt(inp.length-2)=='+') || (inp.charAt(inp.length-2)=='/') || (inp.charAt(inp.length-2)=='=') || (inp.charAt(inp.length-2)=='.') || (inp.charAt(inp.length-2)=='-') || (inp.charAt(inp.length-2)=='*')){
+                if((inp.charAt(0)=='*') || (inp.charAt(0)=='/') || (inp.charAt(inp.length-2)=='+') || (inp.charAt(inp.length-2)=='/') || (inp.charAt(inp.length-2)=='=') || (inp.charAt(inp.length-2)=='.') || (inp.charAt(inp.length-2)=='-') || (inp.charAt(inp.length-2)=='*')){
                     document.querySelector('#input-area').value = 'invalid input ';
                     inp = '';
                     err = true;
